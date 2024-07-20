@@ -1,6 +1,13 @@
 # iterdict
 Cartesian Product Iterators from dictionaries
 
+## Installation
+
+Directly from the GitHub repository:
+
+    pip install git+https://github.com/tiagoft/iterdict.git@main
+
+
 ## What is this?
 
 I frequently encountered the challenge of managing numerous parameters within an algorithm. Understanding how these parameters influence behavior required a thorough exploration of their combinations, akin to a grid search. To address this, I developed `ParameterIterator`.
