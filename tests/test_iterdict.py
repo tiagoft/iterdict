@@ -5,7 +5,8 @@ class TestParameterIterator(unittest.TestCase):
     def setUp(self):
         self.param_dict = {
             'param1': [1, 2],
-            'param2': ['A', 'B']
+            'param2': ['A', 'B'],
+            'param3': 'some_string'
         }
         self.iterator = ParameterIterator(self.param_dict)
 
@@ -19,10 +20,10 @@ class TestParameterIterator(unittest.TestCase):
         """Test if the combinations generated are correct."""
         combinations = list(self.iterator)
         expected_combinations = [
-            {'param1': 1, 'param2': 'A'},
-            {'param1': 1, 'param2': 'B'},
-            {'param1': 2, 'param2': 'A'},
-            {'param1': 2, 'param2': 'B'}
+            {'param1': 1, 'param2': 'A', 'param3': 'some_string'},
+            {'param1': 1, 'param2': 'B', 'param3': 'some_string'},
+            {'param1': 2, 'param2': 'A', 'param3': 'some_string'},
+            {'param1': 2, 'param2': 'B', 'param3': 'some_string'}
         ]
         self.assertCountEqual(combinations, expected_combinations)
 
